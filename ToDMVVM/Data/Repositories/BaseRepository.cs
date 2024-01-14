@@ -67,7 +67,7 @@ namespace ToDMVVM.Data.Repositories
         }
 
         // Create/Update
-        public void SaveEntity(T? entity)
+        public T? SaveEntity(T? entity)
         {
             int result = 0;
             if (entity != null)
@@ -84,6 +84,7 @@ namespace ToDMVVM.Data.Repositories
                         result = connection.Insert(entity);
                         StatusMessage = $"{result} row(s) added";
                     }
+                    return entity;
                 }
                 catch (Exception ex)
                 {
@@ -91,6 +92,8 @@ namespace ToDMVVM.Data.Repositories
                 }
 
             }
+
+            return default(T);
         }
         //cascade
         public void DeleteEntityWithChildren(T entity)

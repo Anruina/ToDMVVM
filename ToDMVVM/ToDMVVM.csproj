@@ -40,11 +40,9 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#FFFFFF" BaseSize="128,128" />
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
@@ -57,9 +55,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\AppIcon\apppicture.png" />
+	  <None Remove="Resources\AppIcon\smallicon.png" />
+	  <None Remove="Resources\Images\appicon.png" />
 	  <None Remove="Resources\Images\wallpaper.png" />
 	  <None Remove="Resources\Raw\cards.json" />
 	  <None Remove="Resources\Raw\shuffleload.json" />
+	  <None Remove="Resources\Splash\shuffleload.json" />
+	  <None Remove="Resources\Splash\splash.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiIcon Include="Resources\AppIcon\apppicture.png" />
+	  <MauiIcon Include="Resources\AppIcon\smallicon.png" />
+	  <MauiSplashScreen Include="Resources\Splash\splash.png" Color="#ffffff" />
+	  <!--<MauiImage Include="Resources\Raw\splash.svg" />-->
 	</ItemGroup>
 
 	<ItemGroup>
@@ -93,13 +103,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="MVVM\Views\CreateCategoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\CreateQuestionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\GameSetupPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\GamePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\ListQuestionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\MemePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\QuestionModifyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

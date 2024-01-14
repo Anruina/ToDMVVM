@@ -17,7 +17,7 @@ namespace ToDMVVM
         }
         private void ModifyGame_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new ListQuestionPage());
         }
     }
 

@@ -33,6 +33,12 @@ namespace ToDMVVM.MVVM.ViewModels
         
         }
         
+
+        public void ChooseQuestionCategories()
+        {
+
+        }
+        
         private void Refresh()
         {
 

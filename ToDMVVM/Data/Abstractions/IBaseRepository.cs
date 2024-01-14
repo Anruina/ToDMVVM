@@ -11,7 +11,7 @@ namespace ToDMVVM.Data.Abstractions
     {
         //Create/Update
 
-        void SaveEntity (T entity);
+        T? SaveEntity (T entity);
 
         //ReadOne / ReadMany
         T? GetEntity(int id);

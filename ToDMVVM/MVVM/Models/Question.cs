@@ -30,7 +30,6 @@ namespace ToDMVVM.MVVM.Models
 
         
         [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)]
-        public Game? Game {  get; set; }
-        
+        public Game? Game {  get; set; }   
     }
 }
