@@ -80,4 +80,28 @@
 		<PackageReference Include="UraniumUI.Material" Version="2.7.4" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="MVVM\Views\GameSetupPage.xaml.cs">
+	    <DependentUpon>GameSetupPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\GamePage.xaml.cs">
+	    <DependentUpon>GamePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\MemePage.xaml.cs">
+	    <DependentUpon>MemePage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="MVVM\Views\GameSetupPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\MemePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

@@ -8,8 +8,8 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="10">
+            Padding="20,0"
+            Spacing="8">
             <skia:SKLottieView
                 Source="cards.json"
                 RepeatCount="-1"
@@ -23,7 +23,9 @@
                     BackgroundColor="#eac4d5"
                     FontAttributes="Bold"
                     FontSize="Large"
-                    WidthRequest="30"
+                    WidthRequest="190"
+                    HeightRequest="190"
+                    CornerRadius="100"
                     Clicked="StartGame_Clicked"
                     />
 
@@ -31,7 +33,8 @@
                     Text="Modify" 
                     TextColor="WhiteSmoke" 
                     BackgroundColor="#eac4d5" 
-                    FontAttributes="Bold" 
+                    FontAttributes="Bold"
+                    WidthRequest="120"
                     FontSize="Medium"
                     Clicked="ModifyGame_Clicked"
                     />

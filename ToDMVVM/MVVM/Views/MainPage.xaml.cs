@@ -1,4 +1,6 @@
-﻿namespace ToDMVVM
+﻿using ToDMVVM.MVVM.Views;
+
+namespace ToDMVVM
 {
     public partial class MainPage : ContentPage
     {
@@ -11,9 +13,9 @@
 
         private void StartGame_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new Memes());
         }
-        private void Modify_Clicked(object sender, EventArgs e)
+        private void ModifyGame_Clicked(object sender, EventArgs e)
         {
 
         }

@@ -8,14 +8,14 @@ namespace ToDMVVM.MVVM.Models
 {
     public class MemeResponseModel
     {
-        string PostLink;
-        string Subreddit;
-        string Title;
-        string URL;
-        bool NSFW;
-        bool Spoiler;
-        string Author;
-        int Ups;
-        string[] Preview;
+        public string? PostLink { get; set; }
+        public string? Subreddit {  get; set; }
+        public string? Title { get; set; }
+        public string? URL { get; set; }
+        public bool NSFW { get; set; }
+        public bool Spoiler { get; set; }
+        public string? Author { get; set; }
+        public int Ups { get; set; }
+        public string[]? Preview { get; set; }
     }
 }

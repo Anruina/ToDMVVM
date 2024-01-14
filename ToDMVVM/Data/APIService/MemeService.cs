@@ -17,7 +17,7 @@ namespace ToDMVVM.Data.APIService
         public MemeService()
         {
             _httpClient = new HttpClient(new HttpClientHandler());
-            _httpClient.BaseAddress = new Uri("https://meme-api.com/gimme");
+            _httpClient.BaseAddress = new Uri("https://meme-api.com/gimme/ProgrammerHumor");
 
             _jsonSerializerOptions = new JsonSerializerOptions
             {
@@ -30,13 +30,13 @@ namespace ToDMVVM.Data.APIService
         }
         public async Task<string> GetMeme()
         {
-            HttpResponseMessage Response = await _httpClient.GetAsync("/ProgrammerHumor/1");
+            HttpResponseMessage Response = await _httpClient.GetAsync("");
 
             if (Response.IsSuccessStatusCode)
             {
                 string Content = await Response.Content.ReadAsStringAsync();
-                MemeResponseModel? ObjectList = System.Text.Json.JsonSerializer.Deserialize<MemeResponseModel>(Content, _jsonSerializerOptions);
-
+                MemeResponseModel? Meme = System.Text.Json.JsonSerializer.Deserialize<MemeResponseModel>(Content, _jsonSerializerOptions);
+                return Meme.URL;
             }
 
             return "";
