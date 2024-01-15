@@ -5,14 +5,9 @@
              xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="ToDMVVM.MainPage">
-    
-    
 
     <Grid>
-        <Image
-            Source=""
-            Aspect="AspectFill"
-            IsVisible="true"/>
+        
         
         <ScrollView>
         <VerticalStackLayout
@@ -23,7 +18,7 @@
                 RepeatCount="-1"
                 HeightRequest="400"
                 WidthRequest="400"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                SemanticProperties.Description="shuffeling cards" />
 
             <Button StyleClass="ElevatedButton" 
                     Text="Start Game" 

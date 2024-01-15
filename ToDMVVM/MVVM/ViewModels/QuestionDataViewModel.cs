@@ -27,7 +27,7 @@ namespace ToDMVVM.MVVM.ViewModels
 
             CreateQuestionCommand = new Command(async () =>
             {
-                App.QuestionRepo.SaveEntityWithChildren(CurrentQuestion);
+                App.QuestionRepo.SaveEntity(CurrentQuestion);
                 Console.WriteLine(App.QuestionRepo.StatusMessage);
                 Refresh();
             });

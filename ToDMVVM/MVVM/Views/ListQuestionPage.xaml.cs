@@ -9,10 +9,11 @@ public partial class ListQuestionPage : ContentPage
 	{
 		InitializeComponent();
 
+
 		QuestionDataViewModel QuestionListViewModel = new QuestionDataViewModel();
 		QuestionListView.ItemsSource = QuestionListViewModel.Questions;
 
-		
+
 
 		List<string> CategoryNames = new List<string>();
 
@@ -21,10 +22,10 @@ public partial class ListQuestionPage : ContentPage
 			CategoryNames.Add(category.Title);
 		}
 
-        ChooseCategory.ItemsSource = CategoryNames;
+		ChooseCategory.ItemsSource = CategoryNames;
 
 		CreateQuestionButton.Command = QuestionListViewModel.CreateQuestionCommand;
 
 
-    }
+	}
 }

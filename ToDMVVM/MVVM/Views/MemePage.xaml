@@ -5,7 +5,7 @@
              Title="Memes">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="This is sadly not functional yet :( so have a  meme send by an API instead! :D"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
