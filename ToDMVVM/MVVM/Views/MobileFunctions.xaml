@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="ToDMVVM.MVVM.Views.MobileFunctions"
+             Title="MobileFunctions">
+    <Grid>
+        <Image 
+            Source="wallpaper.png"  
+            Aspect="AspectFill" 
+            IsVisible="true" />
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Fill"
+            HorizontalOptions="Fill"
+            >
+
+            <cv:CameraView x:Name="cameraView" 
+                           WidthRequest="300" 
+                           HeightRequest="300"
+                           CamerasLoaded="cameraView_camerasLoaded"
+                           />
+            <Image x:Name="myImage" WidthRequest="200" HeightRequest="200"/>
+
+            <Button 
+                Text="SMILE!" 
+                StyleClass="ElevatedButton"        
+                TextColor="WhiteSmoke" 
+                BackgroundColor="#eac4d5" 
+                WidthRequest="200"
+                HeightRequest="50"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                Clicked="Captured_Clicked"/>
+
+
+            <Button 
+                Text="Notify me~!" 
+                StyleClass="ElevatedButton"        
+                TextColor="WhiteSmoke" 
+                BackgroundColor="#eac4d5" 
+                FontAttributes="Italic"
+                WidthRequest="200"
+                HeightRequest="50"
+                FontSize="Medium"
+                Clicked="PushNotification_Clicked"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

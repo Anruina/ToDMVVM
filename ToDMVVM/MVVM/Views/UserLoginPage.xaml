@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icon="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             x:Class="ToDMVVM.MVVM.Views.UserLoginPage"
+             Title="UserLoginPage">
+
+    <!--THIS IS THE LOGIN PAGE-->
+    <Grid>
+        <Image 
+       Source="wallpaper.png"  
+       Aspect="AspectFill" 
+       IsVisible="true" />
+        
+        <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <!--LOGO-->
+            <Image
+                Source="beer.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                />
+
+            <!--LOGIN FORM-->
+
+            <StackLayout x:Name="LoginForm" IsVisible="true">
+                <Label
+                    x:Name="L_UsernameLabel"
+                    Text="Username"
+                    HorizontalOptions="Center" />
+                <Entry 
+                    Placeholder="Your Username Here"                  
+                    x:Name="L_UsernameEntry"            
+                    HorizontalOptions="Center" 
+                    
+                                        />
+
+                <Label
+                    x:Name="L_PasswordLabel"
+                    Text="Password"
+                    HorizontalOptions="Center" />
+
+                <Entry
+                    x:Name="L_PasswordEntry"
+                    Placeholder="Your Password Here"
+                    HorizontalOptions="Center"
+                    IsPassword="True" />
+            </StackLayout>
+
+            <!--REGISTER FORM-->
+
+            <StackLayout x:Name="RegisterForm" IsVisible="false">
+                <Label
+                   x:Name="R_UsernameLabel"
+                   Text="Username"
+                   HorizontalOptions="Center" />
+
+                <Entry
+                   x:Name="R_UsernameEntry"
+                   Placeholder="Your Username Here"
+                   HorizontalOptions="Center" />
+
+                <Label
+                   x:Name="R_PasswordLabel"
+                   Text="Password"
+                   HorizontalOptions="Center" />
+
+                <Entry
+                   x:Name="R_PasswordEntry"
+                   Placeholder="Your Password Here"
+                   HorizontalOptions="Center"
+                   IsPassword="True" />
+
+                <Label
+                    x:Name="R_EmailLabel"
+                    Text="Email"
+                    HorizontalOptions="Center"
+                    />
+
+                <Entry 
+                    x:Name="R_EmailEntry"
+                    Placeholder="Your E-mail Here"
+                    HorizontalOptions="Center"
+                    />
+
+                <Label
+                    x:Name="R_DateOfBirthLabel"
+                    Text="Date of Birth"
+                    HorizontalOptions="Center"
+                    />
+
+                <!--Nog aanpassen met databinding & afdwingen dat gebruiker 18 jaar moet zijn-->
+                <DatePicker
+                        x:Name="R_DateOfBirthEntry"
+                        HorizontalOptions="Center"
+                        MinimumDate="01/01/1823"
+                        MaximumDate="01/01/2050"
+                        Date="01/12/2023"
+                />
+
+                <HorizontalStackLayout 
+                    Padding="30,0"
+                    Spacing="25"
+                    
+                    x:Name="TermsOfServiceCB"
+                    IsVisible="true"
+                    HorizontalOptions="Center"
+                    >
+
+                    <Label
+                        Text="Terms and Conditions"
+                        VerticalOptions="Center"
+                        />
+
+                    <CheckBox
+                        CheckedChanged="CheckBox_CheckedChanged"
+                        
+                    />
+
+
+                </HorizontalStackLayout>
+            </StackLayout>
+
+            <!---LOGIN & REGISTER BUTTONS-->
+
+            <StackLayout>
+                <StackLayout 
+                    Padding="30,0"
+                    Spacing="25"
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    x:Name="LoginButtons"
+                    IsVisible="true"
+                    >
+
+                    <Button
+                    x:Name="RegisterBtn"
+                    Text="Register"
+                    Clicked="RegisterBtn_Clicked"
+                    HorizontalOptions="Center"
+                    />
+
+                    <Button
+                    x:Name="LoginBtn"
+                    Text="Login" 
+                    SemanticProperties.Hint="Logins in the user"
+                    Clicked="LoginBtn_Clicked"
+                    HorizontalOptions="Center" 
+                    />
+
+
+                </StackLayout>
+
+                <!--CANCEL & CREATE BUTTONS-->
+
+                <StackLayout                                       
+                    Orientation="Horizontal"
+                    x:Name="RegisterButtons"
+                    IsVisible="false"
+                    Padding="30,0"
+                    HorizontalOptions="Center"
+                    Spacing="25"                    
+                    >
+
+                    <Button
+                    x:Name="CancelBtn"
+                    Text="Cancel"
+                    Clicked="CancelBtn_Clicked"
+                    HorizontalOptions="Center"    
+                    />
+
+                    <Button
+                    x:Name="CreateBtn"
+                    Text="Create"
+                    Clicked="CreateBtn_Clicked"
+                    HorizontalOptions="Center"    
+                    />
+
+                </StackLayout>
+            </StackLayout>
+
+            <!--Sign in through social media handles-->
+
+
+        </VerticalStackLayout>
+     </ScrollView>
+    </Grid>
+</ContentPage>

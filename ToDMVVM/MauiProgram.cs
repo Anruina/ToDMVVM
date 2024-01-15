@@ -5,6 +5,8 @@ using Syncfusion.Maui.Core.Hosting;
 using ToDMVVM.Data.Repositories;
 using ToDMVVM.MVVM.Models;
 using UraniumUI;
+using Camera.MAUI;
+using Plugin.LocalNotification;
 
 namespace ToDMVVM
 {
@@ -18,8 +20,10 @@ namespace ToDMVVM
                 .UseUraniumUI()
                 .UseUraniumUIMaterial()
                 .UseSkiaSharp()
+                .UseMauiCameraView()
                 .ConfigureSyncfusionCore()
                 .UseMauiCommunityToolkit()
+                .UseLocalNotification()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

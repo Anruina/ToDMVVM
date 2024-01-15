@@ -3,15 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDMVVM.MVVM.Views.Memes"
              Title="Memes">
-    <VerticalStackLayout>
+    <Grid>
+    
+    <Image 
+            Source="wallpaper.png"  
+            Aspect="AspectFill" 
+            IsVisible="true" />
+
+    <VerticalStackLayout
+        Padding="10"
+        Spacing="10"
+        >
+        
         <Label 
             Text="This is sadly not functional yet :( so have a  meme send by an API instead! :D"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
+        
         <Image
             x:Name="MemeImage"
             
             />
+
+
+        <Button
+            Text="Say cheese!"
+            StyleClass="ElevatedButton"        
+            TextColor="WhiteSmoke" 
+            BackgroundColor="#eac4d5" 
+            FontAttributes="Bold"
+            WidthRequest="200"
+            HeightRequest="50"
+            
+            FontSize="Medium"
+            Clicked="CaptureSmileOnClick"
+            />
+        
+        
+        
+
     </VerticalStackLayout>
+    </Grid>
 </ContentPage>

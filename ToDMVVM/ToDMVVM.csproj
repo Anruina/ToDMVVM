@@ -74,11 +74,13 @@
 
 	<ItemGroup>
 		<PackageReference Include="Bogus" Version="35.3.2" />
+		<PackageReference Include="Camera.MAUI" Version="1.4.4" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Plugin.LocalNotification" Version="10.1.8" />
 		<PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
 		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
@@ -91,12 +93,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MVVM\Views\GameSetupPage.xaml.cs">
-	    <DependentUpon>GameSetupPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MVVM\Views\GamePage.xaml.cs">
-	    <DependentUpon>GamePage.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="MVVM\Views\MemePage.xaml.cs">
 	    <DependentUpon>MemePage.xaml</DependentUpon>
 	  </Compile>
@@ -109,19 +105,16 @@
 	  <MauiXaml Update="MVVM\Views\CreateQuestionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\GameSetupPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\GamePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\ListQuestionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\MemePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\QuestionModifyPage.xaml">
+	  <MauiXaml Update="MVVM\Views\MobileFunctions.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\UserLoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

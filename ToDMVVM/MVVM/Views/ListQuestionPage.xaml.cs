@@ -9,23 +9,21 @@ public partial class ListQuestionPage : ContentPage
 	{
 		InitializeComponent();
 
-
-		QuestionDataViewModel QuestionListViewModel = new QuestionDataViewModel();
-		QuestionListView.ItemsSource = QuestionListViewModel.Questions;
-
-
-
-		List<string> CategoryNames = new List<string>();
-
-		foreach (Category category in QuestionListViewModel.Categories)
-		{
-			CategoryNames.Add(category.Title);
-		}
-
-		ChooseCategory.ItemsSource = CategoryNames;
-
-		CreateQuestionButton.Command = QuestionListViewModel.CreateQuestionCommand;
+        //Ik weet dat dit niet zo hoort, maar kreeg het voor nu niet anders werkend.
+        QuestionDataViewModel QuestionListViewModel = new QuestionDataViewModel();
+        QuestionListView.ItemsSource = QuestionListViewModel.Questions;
 
 
-	}
+
+        List<string> CategoryNames = new List<string>();
+
+        foreach (Category category in QuestionListViewModel.Categories)
+        {
+            CategoryNames.Add(category.Title);
+        }
+
+        ChooseCategory.ItemsSource = CategoryNames;
+
+        CreateQuestionButton.Command = QuestionListViewModel.CreateQuestionCommand;
+    }
 }

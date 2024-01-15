@@ -5,35 +5,42 @@
              Title="ListQuestionPage"
              xmlns:vm="clr-namespace:ToDMVVM.MVVM.ViewModels"
              >
-    <VerticalStackLayout>
-        <Entry Placeholder="Write your Question"
-               Text="{Binding CurrentQuestion}"/>
 
-        <Picker
-            x:Name="ChooseCategory"
-            ItemsSource="{Binding Categories.Title}"/>
+    <Grid>
+        <Image 
+            Source="wallpaper.png"  
+            Aspect="AspectFill" 
+            IsVisible="true" />
+        <VerticalStackLayout>
+            <Entry Placeholder="Write your Question"
+                   Text="{Binding CurrentQuestion}"/>
 
-        <Button Text="Create"
-                x:Name="CreateQuestionButton"
-                Command="{Binding CreateQuestionCommand}"
+            <Picker
+                x:Name="ChooseCategory"
+                ItemsSource="{Binding Categories.Title}"/>
+
+            <Button Text="Create"
+                    x:Name="CreateQuestionButton"
+                    Command="{Binding CreateQuestionCommand}"
             
-            />
-        <ListView
-            x:Name="QuestionListView"
-            ItemsSource="{Binding Questions}"
-            >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label
-                                Text="{Binding Description}"
-                                />
+                />
+            <ListView
+                x:Name="QuestionListView"
+                ItemsSource="{Binding Questions}"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label
+                                    Text="{Binding Description}"
+                                    />
 
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

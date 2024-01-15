@@ -18,4 +18,9 @@ public partial class Memes : ContentPage
 		MemeImage.Source = ImageSource.FromUri(new Uri(await ServiceLocator.memeService.GetMeme()));
     }
 
+	private void CaptureSmileOnClick(object sender, EventArgs e)
+	{
+        Navigation.PushAsync(new MobileFunctions());
+    }
+
 }

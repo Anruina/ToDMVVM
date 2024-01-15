@@ -7,7 +7,10 @@
              x:Class="ToDMVVM.MainPage">
 
     <Grid>
-        
+        <Image 
+        Source="wallpaper.png"  
+        Aspect="AspectFill" 
+        IsVisible="true" />
         
         <ScrollView>
         <VerticalStackLayout
@@ -42,7 +45,16 @@
                     Clicked="ModifyGame_Clicked"
                     />
 
-        </VerticalStackLayout>
+            <Button StyleClass="ElevatedButton" 
+                    Text="Login" 
+                    TextColor="WhiteSmoke" 
+                    BackgroundColor="#eac4d5" 
+                    FontAttributes="Bold"
+                    WidthRequest="120"
+                    FontSize="Medium"
+                    Clicked="LoginSignIn_Clicked"
+                    />
+            </VerticalStackLayout>
     </ScrollView>
     </Grid>
 </ContentPage>

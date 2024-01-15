@@ -3,5 +3,10 @@
 	<application android:allowBackup="true" android:supportsRtl="true" android:label="Truth Or Drink" android:icon="@mipmap/smallicon"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.RECORD_VIDEO" />
+	<uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+	<uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
 	<uses-sdk />
 </manifest>
